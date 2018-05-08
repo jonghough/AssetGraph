@@ -277,7 +277,7 @@ namespace UnityEngine.AssetGraph {
 			AssetGraphController c = new AssetGraphController(graph);
 
 			// perform setup. Fails if any exception raises.
-			c.Perform(target, false, true, true, null);
+            c.Perform(target, false, true, true, updateHandler);
 
 			// if there is error reported, then run
 			if(c.IsAnyIssueFound) {
